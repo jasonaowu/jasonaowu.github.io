@@ -6,6 +6,7 @@
     /* 这里改变跟随的底色 */
     /* background: var(--theme-color);*/
     background: rgb(57, 197, 187);
+    /* background: #000; */
     border-radius: 8px;
     opacity: 0.25;
     z-index: 10086;
@@ -21,41 +22,41 @@
   #cursor.hover {
     opacity: 0.1;
     transform: scale(2.5);
-    -webkit-transform: scale(2.5);
+    /* -webkit-transform: scale(2.5);
     -moz-transform: scale(2.5);
     -ms-transform: scale(2.5);
-    -o-transform: scale(2.5);
+    -o-transform: scale(2.5); */
   }
   
   #cursor.active {
     opacity: 0.5;
     transform: scale(0.5);
-    -webkit-transform: scale(0.5);
+    /* -webkit-transform: scale(0.5);
     -moz-transform: scale(0.5);
     -ms-transform: scale(0.5);
-    -o-transform: scale(0.5);
+    -o-transform: scale(0.5); */
   }
 
-/* 帧率检测 */
-#fps {
-  position: fixed;
-  /* 指定位置 */
-  right: 10px;
-  bottom: 10px;
-  z-index: 1919810;
+#fps{
+    position: fixed;
+    right:10px;
+    bottom:4px;
+    z-index: 1919810;
 }
-[data-theme="light"] #fps {
-  background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: var(--backdrop-filter);
-  padding: 4px;
-  border-radius: 4px;
+
+[data-theme="light"] #fps{
+    background-color: white;
+    padding: 4px;
+    border-radius: 4px;
+    backdrop-filter: blur(10px);
 }
-[data-theme="dark"] #fps {
-  background-color: rgba(0, 0, 0, 0.72);
-  backdrop-filter: var(--backdrop-filter);
-  padding: 4px;
-  border-radius: 4px;
+[data-theme="dark"] #fps{
+    background-color: black;
+    padding: 4px;
+    border-radius: 4px;
+    backdrop-filter: blur(10px);
 }
+
 
 /* 滚动条样式 */
 ::-webkit-scrollbar {
