@@ -13,7 +13,7 @@
       
       <categories>
           
-          <category> 📝 博客搭建 </category>
+          <category> 博客搭建 </category>
           
       </categories>
       
@@ -38,7 +38,7 @@
       
       <categories>
           
-          <category> 📝 博客搭建 </category>
+          <category> 博客搭建 </category>
           
       </categories>
       
@@ -54,16 +54,93 @@
     
     
     <entry>
-      <title>算法（一）</title>
-      <link href="/post/67a5c110.html"/>
-      <url>/post/67a5c110.html</url>
+      <title>ESP32</title>
+      <link href="/post/df899a68.html"/>
+      <url>/post/df899a68.html</url>
       
-        <content type="html"><![CDATA[<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><h2 id="快排"><a href="#快排" class="headerlink" title="快排"></a>快排</h2><h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
       
       <categories>
           
-          <category> 📜 算法 </category>
+          <category> 嵌入式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ESP32 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>阿里云部署</title>
+      <link href="/post/7214931d.html"/>
+      <url>/post/7214931d.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 物联网 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 阿里云 </tag>
+            
+            <tag> 云服务器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>算法（一）</title>
+      <link href="/post/67a5c110.html"/>
+      <url>/post/67a5c110.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><h2 id="快排"><a href="#快排" class="headerlink" title="快排"></a>快排</h2><div class="tabs" id="test1"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test1-1">test1 1</button></li><li class="tab"><button type="button" data-href="#test1-2">test1 2</button></li><li class="tab"><button type="button" data-href="#test1-3">test1 3</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test1-1"><p><strong>二分+分治</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">quick_sort</span><span class="params">(<span class="type">int</span> a[],<span class="type">int</span> l,<span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">if</span>(l &gt;= r) <span class="keyword">return</span>;  <span class="comment">//退出条件忘记了 </span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> x = a[l+r&gt;&gt;<span class="number">1</span>];</span><br><span class="line"><span class="type">int</span> i = l<span class="number">-1</span> , j =r+<span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(i &lt; j)&#123;</span><br><span class="line"><span class="keyword">do</span>&#123;i++;&#125;  <span class="keyword">while</span>(a[i] &lt; x);<span class="comment">//这里是等于的时候运行不了 </span></span><br><span class="line"><span class="keyword">do</span>&#123;j--;&#125;  <span class="keyword">while</span>(a[j] &gt; x);</span><br><span class="line"><span class="keyword">if</span>(i &lt; j) <span class="built_in">swap</span>(a[i],a[j]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">quick_sort</span>(a,l,j); <span class="comment">//j-1和j也不对 ,i-1和i不对 </span></span><br><span class="line"><span class="built_in">quick_sort</span>(a,j+<span class="number">1</span>,r);  <span class="comment">//i和i+1，j和j+1都对 </span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">cin &gt;&gt; n;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i =<span class="number">0</span>;i &lt; n;i++) cin &gt;&gt; a[i];</span><br><span class="line"><span class="built_in">quick_sort</span>(a,<span class="number">0</span>,n<span class="number">-1</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i =<span class="number">0</span>;i &lt; n;i++) cout &lt;&lt; a[i] &lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-2"><p><strong>sort用法.</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//注意一下两种写法</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line"><span class="built_in">sort</span>(a+<span class="number">1</span> , a+n+<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; n;i++)</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line"><span class="built_in">sort</span>(a , a+n);</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-3"><p><strong>第k小的数</strong></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">quick_sort</span><span class="params">(<span class="type">int</span> a[],<span class="type">int</span> l,<span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">if</span>(l &gt;= r) <span class="keyword">return</span>;</span><br><span class="line"><span class="type">int</span> x = a[l+r&gt;&gt;<span class="number">1</span>];</span><br><span class="line"><span class="type">int</span> i = l<span class="number">-1</span> , j = r+<span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(i &lt; j)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">do</span>&#123;i++;&#125; <span class="keyword">while</span>(a[i] &lt; x);</span><br><span class="line"><span class="keyword">do</span>&#123;j--;&#125; <span class="keyword">while</span>(a[j] &gt; x);</span><br><span class="line"><span class="keyword">if</span>(i &lt; j) <span class="built_in">swap</span>(a[i] , a[j]);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">quick_sort</span>(a , l , j);</span><br><span class="line"><span class="built_in">quick_sort</span>(a , j+<span class="number">1</span> , r);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="comment">//cin &gt;&gt; n &gt;&gt; k;</span></span><br><span class="line"><span class="comment">//scanf(&quot;%d,%d&quot;,&amp;n,&amp;k);</span></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;n,&amp;k);</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>;i &lt; n;i++) <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line"><span class="built_in">quick_sort</span>(a , <span class="number">0</span> , n<span class="number">-1</span>);</span><br><span class="line"><span class="comment">//printf(&quot;%d&quot;,a[k]);</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,a[k]);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><h2 id><a href="#" class="headerlink" title></a></h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> algorithm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>算法（三）</title>
+      <link href="/post/760c84b7.html"/>
+      <url>/post/760c84b7.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="哎"><a href="#哎" class="headerlink" title="哎"></a>哎</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
           
       </categories>
       
@@ -88,7 +165,7 @@
       
       <categories>
           
-          <category> 📜 算法 </category>
+          <category> 算法 </category>
           
       </categories>
       
@@ -96,83 +173,6 @@
         <tags>
             
             <tag> algorithm </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>ESP32</title>
-      <link href="/post/df899a68.html"/>
-      <url>/post/df899a68.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> 🎛️ 嵌入式 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> ESP32 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>算法（三）</title>
-      <link href="/post/760c84b7.html"/>
-      <url>/post/760c84b7.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="哎"><a href="#哎" class="headerlink" title="哎"></a>哎</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> 📜 算法 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> algorithm </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>阿里云部署</title>
-      <link href="/post/7214931d.html"/>
-      <url>/post/7214931d.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> 💻 物联网 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 阿里云 </tag>
-            
-            <tag> 云服务器 </tag>
             
         </tags>
       
@@ -190,7 +190,7 @@
       
       <categories>
           
-          <category> 📝 博客搭建 </category>
+          <category> 博客搭建 </category>
           
       </categories>
       
@@ -215,7 +215,7 @@
       
       <categories>
           
-          <category> 📝 博客搭建 </category>
+          <category> 博客搭建 </category>
           
       </categories>
       
