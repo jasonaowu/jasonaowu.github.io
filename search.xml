@@ -60,7 +60,7 @@
       <link href="/posts/cf98f42e/"/>
       <url>/posts/cf98f42e/</url>
       
-        <content type="html"><![CDATA[<h1 id="阿里云"><a href="#阿里云" class="headerlink" title="阿里云"></a>阿里云</h1><h2 id="域名注册"><a href="#域名注册" class="headerlink" title="域名注册"></a>域名注册</h2><p>在阿里云万网输入自己想要购买的域名 ——&gt; <a href="https://wanwang.aliyun.com/?spm=5176.10695662.1158081.1.59854234vGvJdM">域名注册</a></p><p><img src="https://blog-1316756713.cos.ap-shanghai.myqcloud.com/img/%E5%9F%9F%E5%90%8D1.webp" alt="image-20230207181351230"></p><p>选好自己的域名，加入清单，然后支付</p><h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p>找到域名选项，找到刚才注册的域名，点解析</p><p>添加记录如下图所示</p><p><img src="https://blog-1316756713.cos.ap-shanghai.myqcloud.com/img/%E5%9F%9F%E5%90%8D2.webp" alt="image-20230207181530307"></p><h1 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h1><h2 id="Pages设置"><a href="#Pages设置" class="headerlink" title="Pages设置"></a>Pages设置</h2><p>将解析完的域名填入Custom domain（自定义域），点save保存</p><p><img src="https://blog-1316756713.cos.ap-shanghai.myqcloud.com/img/%E5%9F%9F%E5%90%8D3.webp" alt="image-20230207181703484"></p><p> 大概等一小会，颁发安全证书，获得证书后就可以勾选Enforce HTTPS（强制使用HTTPS，HTTPS较HTTP要更安全一些，所以尽量勾选上</p><h2 id="CNAME文件"><a href="#CNAME文件" class="headerlink" title="CNAME文件"></a>CNAME文件</h2><p>然后，在Hexo的博客文件下，进入<code>source</code>，新建一个CNAME文件，无后缀扩展名。<br> 内容写入<strong>刚刚解析的域名</strong></p><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>在阿里云设置好了自己的dns解析路径，并且输入自己申请的域名后，点击保存，图中那个蓝色区域的位置一直显示的是your site is ready to publish…. 然后访问绑定后的网址，浏览器报无法解析的异常。可能是计算机里面的dns缓存造成的。因为之前用默认的域名访问过博客，计算机会保存该博客IP地址对应的域名信息。当我们对域名进行访问时，不会向dns服务器寻求帮助，会先从缓存的dns列表里面查找,由于dns缓存列表的信息没有改变，在计算机对该域名访问时仍然不会连接Dns服务器获取最新解析信息，会根据自己计算机上保存的缓存</p><ol><li>通过“开始-&gt;运行-&gt;输入CMD”进入命令行模式。</li><li>在命令行模式中我们可以看到在ipconfig /?中有一个名为/flushdns的参数，这个就是清除DNS缓存信息的命令。</li><li>执行<strong>ipconfig /flushdns</strong>命令，当出现“successfully flushed the dns resolver cache”的提示时就说明当前计算机的缓存信息已经被成功清除。</li><li>接下来我们再访问域名时，就会到Dns服务器上获取最新解析地址，再也不会出现因为以前的缓存造成解析错误故障了。</li></ol><p>或者</p><ol><li><p>域名没有实名制，因此dns服务商没有提供解析服务。</p></li><li><p>给解析添加A类型，以下地址任选一</p></li></ol><ul><li>185.199.108.153</li><li>185.199.109.153</li><li>185.199.110.153</li><li>185.199.111.153</li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="阿里云"><a href="#阿里云" class="headerlink" title="阿里云"></a>阿里云</h1><h2 id="域名注册"><a href="#域名注册" class="headerlink" title="域名注册"></a>域名注册</h2><p>在阿里云万网输入自己想要购买的域名 ——&gt; <a href="https://wanwang.aliyun.com/?spm=5176.10695662.1158081.1.59854234vGvJdM">域名注册</a></p><p><img src="https://blog-1316756713.cos.ap-shanghai.myqcloud.com/img/%E5%9F%9F%E5%90%8D1.webp" alt="image-20230207181351230"></p><p>选好自己的域名，加入清单，然后支付</p><h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><p>找到域名选项，找到刚才注册的域名，点解析</p><p>添加记录如下图所示</p><p><img src="https://blog-1316756713.cos.ap-shanghai.myqcloud.com/img/%E5%9F%9F%E5%90%8D2.webp" alt="image-20230207181530307"></p><h1 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h1><h2 id="Pages设置"><a href="#Pages设置" class="headerlink" title="Pages设置"></a>Pages设置</h2><p>将解析完的域名填入Custom domain（自定义域），点save保存</p><p><img src="https://blog-1316756713.cos.ap-shanghai.myqcloud.com/img/%E5%9F%9F%E5%90%8D3.webp" alt="image-20230207181703484"></p><p> 大概等一小会，颁发安全证书，获得证书后就可以勾选Enforce HTTPS（强制使用HTTPS，HTTPS较HTTP要更安全一些，所以尽量勾选上</p><h2 id="CNAME文件"><a href="#CNAME文件" class="headerlink" title="CNAME文件"></a>CNAME文件</h2><p>然后，在Hexo的博客文件下，进入<code>source</code>，新建一个CNAME文件，无后缀扩展名。<br> 内容写入<strong>刚刚解析的域名</strong></p><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>在阿里云设置好了自己的dns解析路径，并且输入自己申请的域名后，点击保存，图中那个蓝色区域的位置一直显示的是your site is ready to publish…. 然后访问绑定后的网址，浏览器报无法解析的异常。可能是计算机里面的dns缓存造成的。因为之前用默认的域名访问过博客，计算机会保存该博客IP地址对应的域名信息。当我们对域名进行访问时，不会向dns服务器寻求帮助，会先从缓存的dns列表里面查找,由于dns缓存列表的信息没有改变，在计算机对该域名访问时仍然不会连接Dns服务器获取最新解析信息，会根据自己计算机上保存的缓存</p><ol><li>通过“开始-&gt;运行-&gt;输入CMD”进入命令行模式。</li><li>在命令行模式中我们可以看到在ipconfig /?中有一个名为/flushdns的参数，这个就是清除DNS缓存信息的命令。</li><li>执行<strong>ipconfig /flushdns</strong>命令，当出现“successfully flushed the dns resolver cache”的提示时就说明当前计算机的缓存信息已经被成功清除。</li><li>接下来我们再访问域名时，就会到Dns服务器上获取最新解析地址，再也不会出现因为以前的缓存造成解析错误故障了。</li></ol><p>或者</p><ol><li><p>域名没有实名制，因此dns服务商没有提供解析服务。</p></li><li><p>给解析添加A类型，以下地址任选一</p></li></ol><ul><li>185.199.108.153</li><li>185.199.109.153</li><li>185.199.110.153</li><li>185.199.111.153</li></ul><h1 id="改进"><a href="#改进" class="headerlink" title="改进"></a>改进</h1><p>在source目录下（不是<a href="https://so.csdn.net/so/search?q=hexo&spm=1001.2101.3001.7020">hexo</a>根目录下），创建一个CNAME文件，可以用sublime创建，然后保存成（All files格式）</p><p>CNAME文件里写自己新的域名</p><p><img src="https://img-blog.csdn.net/20180821150011184?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MzMyNDM2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"></p>]]></content>
       
       
       <categories>
@@ -156,23 +156,23 @@
     
     
     <entry>
-      <title>ESP32</title>
-      <link href="/posts/df899a68/"/>
-      <url>/posts/df899a68/</url>
+      <title>算法（二）</title>
+      <link href="/posts/3b1227e5/"/>
+      <url>/posts/3b1227e5/</url>
       
         <content type="html"><![CDATA[]]></content>
       
       
       <categories>
           
-          <category> 嵌入式 </category>
+          <category> 算法 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> ESP32 </tag>
+            <tag> algorithm </tag>
             
         </tags>
       
@@ -206,23 +206,23 @@
     
     
     <entry>
-      <title>算法（二）</title>
-      <link href="/posts/3b1227e5/"/>
-      <url>/posts/3b1227e5/</url>
+      <title>ESP32</title>
+      <link href="/posts/df899a68/"/>
+      <url>/posts/df899a68/</url>
       
         <content type="html"><![CDATA[]]></content>
       
       
       <categories>
           
-          <category> 算法 </category>
+          <category> 嵌入式 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> algorithm </tag>
+            <tag> ESP32 </tag>
             
         </tags>
       
