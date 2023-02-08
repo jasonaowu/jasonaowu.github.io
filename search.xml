@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>一图流背景</title>
+      <link href="/posts/49bf423b/"/>
+      <url>/posts/49bf423b/</url>
+      
+        <content type="html"><![CDATA[<h1 id="设置图片"><a href="#设置图片" class="headerlink" title="设置图片"></a>设置图片</h1><p>这个是 <a href="https://butterfly.js.org/">Butterfly</a> 自带的功能，修改主题的配置文件 <code>_config.butterfly.yml</code>。</p><p>编辑 <code>index_img</code>、<code>background</code>、<code>footer_bg</code> 选项。<br>设置网站背景，并将主页顶部图和页脚背景改为透明。<br>(需要将以下示例地址替换为自己的图片地址。)</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># The banner image of home page</span></span><br><span class="line"><span class="attr">index_img:</span> <span class="string">transparent</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Beautify/Effect (美化/效果)</span></span><br><span class="line"><span class="comment"># --------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Website Background (設置網站背景)</span></span><br><span class="line"><span class="attr">background:</span> <span class="string">url(https://example.com/img/background.jpg)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Footer Background</span></span><br><span class="line"><span class="attr">footer_bg:</span> <span class="string">transparent</span></span><br></pre></td></tr></table></figure><h1 id="引入相关样式"><a href="#引入相关样式" class="headerlink" title="引入相关样式"></a>引入相关样式</h1><h2 id="引入相关样式-1"><a href="#引入相关样式-1" class="headerlink" title="引入相关样式"></a>引入相关样式</h2><p>新建一个文件，位于 <code>source/css/modify.styl</code>，并增加以下内容。</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;nib&#x27;</span></span><br><span class="line"></span><br><span class="line">// 顶部图</span><br><span class="line">#page-header</span><br><span class="line">  &amp;, &amp;:before</span><br><span class="line">    <span class="attribute">background</span>: transparent !important</span><br><span class="line">  &amp;.post-bg, &amp;.not-home-page</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">280px</span> !important</span><br><span class="line">  #post-info</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">40px</span> !important</span><br><span class="line">  #page-site-info</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">140px</span> !important</span><br><span class="line"></span><br><span class="line">  @media screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">768px</span>)</span><br><span class="line">    &amp;.not-home-page</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">200px</span> !important</span><br><span class="line">    #post-info</span><br><span class="line">      <span class="attribute">bottom</span>: <span class="number">10px</span> !important</span><br><span class="line">    #page-site-info</span><br><span class="line">      <span class="attribute">top</span>: <span class="number">100px</span> !important</span><br><span class="line"></span><br><span class="line">.top-img</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">250px</span></span><br><span class="line">  <span class="attribute">margin</span>: -<span class="number">50px</span> -<span class="number">40px</span> <span class="number">50px</span></span><br><span class="line">  <span class="attribute">border-top-left-radius</span>: inherit</span><br><span class="line">  <span class="attribute">border-top-right-radius</span>: inherit</span><br><span class="line">  <span class="attribute">background-position</span>: center center</span><br><span class="line">  <span class="attribute">background-size</span>: cover</span><br><span class="line">  <span class="attribute">transition</span>: all <span class="number">0.3s</span></span><br><span class="line"></span><br><span class="line">  @media screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">768px</span>)</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">230px</span></span><br><span class="line">    <span class="attribute">margin</span>: -<span class="number">36px</span> -<span class="number">14px</span> <span class="number">36px</span></span><br><span class="line"></span><br><span class="line">  [data-theme=<span class="string">&#x27;dark&#x27;</span>] &amp;</span><br><span class="line">    <span class="attribute">filter</span>: brightness(<span class="number">0.8</span>)</span><br><span class="line"></span><br><span class="line">// 页脚</span><br><span class="line">#<span class="attribute">footer</span>:before</span><br><span class="line">  <span class="attribute">background-color</span>: alpha(#FFF, .<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">  [data-theme=<span class="string">&#x27;dark&#x27;</span>] &amp;</span><br><span class="line">    <span class="attribute">background-color</span>: alpha(#<span class="number">000</span>, .<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">#footer-wrap, #footer-wrap a</span><br><span class="line">  <span class="attribute">color</span>: #<span class="number">111</span></span><br><span class="line">  <span class="attribute">transition</span>: unset</span><br><span class="line"></span><br><span class="line">  [data-theme=<span class="string">&#x27;dark&#x27;</span>] &amp;</span><br><span class="line">    <span class="attribute">color</span>: var(--light-grey)</span><br></pre></td></tr></table></figure><p>在主题配置文件 <code>_config.butterfly.yml</code> 的 <code>inject.head</code> 引入样式。</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Inject</span></span><br><span class="line"><span class="comment"># Insert the code to head (before &#x27;&lt;/head&gt;&#x27; tag) and the bottom (before &#x27;&lt;/body&gt;&#x27; tag)</span></span><br><span class="line"><span class="comment"># 插入代码到头部 &lt;/head&gt; 之前 和 底部 &lt;/body&gt; 之前</span></span><br><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/modify.css&quot;&gt;</span></span><br></pre></td></tr></table></figure><h1 id="增加插件脚本"><a href="#增加插件脚本" class="headerlink" title="增加插件脚本"></a>增加插件脚本</h1><p>因为使用了 <code>cheerio</code> 来解析 HTML，所以需要先安装此依赖。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install cheerio</span><br></pre></td></tr></table></figure><p>新建一个文件，位于 <code>js/modify.js</code>，并增加以下内容。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> cheerio = <span class="built_in">require</span>(<span class="string">&#x27;cheerio&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 在页面插入新顶部图</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">cheerio.Root</span>&#125; $ Root</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">insertTopImg</span>(<span class="params">$</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> header = $(<span class="string">&#x27;#page-header&#x27;</span>);</span><br><span class="line">    <span class="keyword">if</span> (header.<span class="property">length</span> === <span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">let</span> background = header.<span class="title function_">css</span>(<span class="string">&#x27;background-image&#x27;</span>);</span><br><span class="line">    <span class="keyword">if</span> (!background) <span class="keyword">return</span>;</span><br><span class="line">    $(<span class="string">&#x27;#post, #page, #archive, #tag, #category&#x27;</span>).<span class="title function_">prepend</span>(<span class="string">`&lt;div class=&quot;top-img&quot; style=&quot;background-image: <span class="subst">$&#123;background&#125;</span>;&quot;&gt;&lt;/div&gt;`</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">hexo.<span class="property">extend</span>.<span class="property">filter</span>.<span class="title function_">register</span>(<span class="string">&#x27;after_render:html&#x27;</span>, <span class="keyword">function</span>(<span class="params">str, data</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> $ = cheerio.<span class="title function_">load</span>(str, &#123;</span><br><span class="line">        <span class="attr">decodeEntities</span>: <span class="literal">false</span></span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="title function_">insertTopImg</span>($);</span><br><span class="line">    <span class="keyword">return</span> $.<span class="title function_">html</span>();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客搭建 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 🦋Butterfly </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>微信小程序</title>
       <link href="/posts/4618cb0a/"/>
       <url>/posts/4618cb0a/</url>
@@ -156,6 +181,31 @@
     
     
     <entry>
+      <title>ESP32</title>
+      <link href="/posts/df899a68/"/>
+      <url>/posts/df899a68/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 嵌入式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ESP32 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>算法（二）</title>
       <link href="/posts/3b1227e5/"/>
       <url>/posts/3b1227e5/</url>
@@ -198,31 +248,6 @@
         <tags>
             
             <tag> algorithm </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>ESP32</title>
-      <link href="/posts/df899a68/"/>
-      <url>/posts/df899a68/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> 嵌入式 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> ESP32 </tag>
             
         </tags>
       
