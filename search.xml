@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>无人机控制算法</title>
+      <link href="/posts/9a3063ce/"/>
+      <url>/posts/9a3063ce/</url>
+      
+        <content type="html"><![CDATA[<h1 id="导论"><a href="#导论" class="headerlink" title="导论"></a>导论</h1><p>多旋翼是垂直起降的，难以大型化，具有较短的续航和较小的负载，是一个非自稳设计。</p><p>我们最主要研究小型无人机。无人机自主导航架构如下图所示。</p><p><img src="https://blog-1316756713.cos.ap-shanghai.myqcloud.com/img/202306021205514.webp" alt="image-20230602110244041"></p><p> 定位：GPS、动作捕捉仪、视觉惯性里程计（VIO）、激光</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 四旋翼 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 四旋翼 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>四旋翼运动建模</title>
       <link href="/posts/a3a7b283/"/>
       <url>/posts/a3a7b283/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="数学知识"><a href="#数学知识" class="headerlink" title="数学知识"></a>数学知识</h1><p>无人机理论需要的数学基础</p><ol><li>微积分：</li></ol><p>向量值微积分。</p><p>托马斯微积分与普林斯顿微积分读本-学习基本微积分知识。</p><ol start="2"><li>线性代数与运动学：</li></ol><p>学习向量的基变换，即坐标系的基变换。</p><p>进阶学习变换的矩阵表示以及矩阵论。</p><ol start="3"><li>动力学：</li></ol><p>学习旋转的相对性及坐标系与动态系统向量的微分运动关系。<br>进阶学习分析力学，拉格朗日力学，哈密顿方程用于数学建模，这些都需要以泛函、变分法作为基础。</p><ol start="4"><li>信号与系统：</li></ol><p>学习信号的频域分析，线性时不变LTI系统，从周期信号的傅里叶级数表示推广到非周期信号的傅里叶变换获得信号的频域组成，再扩展到拉普拉斯变换求解线性时不变系统的线性常系数微分方程，需要复变函数的微积分基础。</p><p>进阶学习数字滤波器设计、自适应滤波器、卡尔曼滤波、最小二乘估计、维纳滤波器等这些需要概率论中随机变量的基础，滤波器可结合MATLAB仿真。</p><ol start="5"><li>自动控制理论：</li></ol><p>学习动态控制系统的数学建模，系统传递函数（系统单位冲激响应函数的频域表示即拉普拉斯变换）的推导分析。</p><p>机器人导论或惯性导航的学习可了解姿态的四元数、欧拉角、方向余弦矩阵表示。<br>6. 实践：</p><p>通过控制芯片stm32及C语言、汇编的编程实践四轴项目来结合上述知识来深化理解。</p><p>学习数值分析来解决向量的误差矫正问题，如叉积矫正旋转的误差以及量化误差，以及引入反馈来解决实际系统的累积误差。</p><p><a href="https://zhuanlan.zhihu.com/p/394491146">https://zhuanlan.zhihu.com/p/394491146</a></p><p><a href="https://www.zhihu.com/column/multiUAV">https://www.zhihu.com/column/multiUAV</a></p><p>Gazebo 有优秀的物理引擎，可以模拟出真实的物理环境，同时也能够自主搭建环境；凤凰模拟器能够模拟遥控器手动飞行，对于飞手的训练有非常大的帮助。</p><h1 id="学习路线"><a href="#学习路线" class="headerlink" title="学习路线"></a>学习路线</h1><p><img src="https://blog-1316756713.cos.ap-shanghai.myqcloud.com/img/202306010019671.webp" alt="image-20230601001948772"></p><h1 id="多旋翼飞行器理论与实践"><a href="#多旋翼飞行器理论与实践" class="headerlink" title="多旋翼飞行器理论与实践"></a>多旋翼飞行器理论与实践</h1><p><a href="https://github.com/Amos-Chen98/quadsim">https://github.com/Amos-Chen98/quadsim</a></p>]]></content>
       
       
       <categories>
